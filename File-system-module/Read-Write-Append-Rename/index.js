@@ -1,5 +1,12 @@
 const fs = require("fs");
 
+//Create new folder
+fs.mkdirSync("temp1")
+fs.mkdirSync("temp2")
+
+//to delete a folder
+fs.rmdirSync("temp1")
+
 //creating new file
 fs.writeFileSync("read.txt","This file created using fs")
 
@@ -28,3 +35,11 @@ console.log(thirdReadData);
 
 //If you want to rename the file
 fs.renameSync("read.txt","newFile.txt")
+
+//shall we create two dummy file
+fs.writeFileSync("dummy1.txt","dummy1")
+fs.writeFileSync("dummy2.txt","dummy2")
+
+//delete one of them
+fs.unlinkSync("dummy2.txt")
+
